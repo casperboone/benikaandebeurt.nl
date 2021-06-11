@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useRouter } from 'next/dist/client/router'
 import { useEffect, useState } from 'react'
 
-export default function Home() {
+export default function Year() {
   const { slug } = useRouter().query
   useEffect(() => { setYear(slug?.[0]) }, [slug])
 
@@ -29,7 +29,7 @@ export default function Home() {
   }, [year])
 
   return (
-    <div className="h-full flex items-center justify-center">
+    <div className="h-full flex items-center justify-center text-4xl">
       { available ? 'Ja' : 'Nee' }
     </div>
   )
