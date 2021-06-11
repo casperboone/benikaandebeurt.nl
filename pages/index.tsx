@@ -1,12 +1,12 @@
 import { useRouter } from 'next/dist/client/router'
-import { FormEventHandler, useEffect, useRef, useState } from 'react'
+import { FormEvent, useEffect, useRef, useState } from 'react'
 
 export default function Home() {
   const router = useRouter()
 
   const [year, setYear] = useState('')
 
-  const redirect = (event: FormEventHandler<HTMLFormElement>) => {
+  const redirect = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     router.push(`/jaar/${year}`)
   }
