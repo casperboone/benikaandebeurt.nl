@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="h-full flex items-center justify-center">
       <form onSubmit={redirect} className="w-full flex justify-center">
-        <input type="text" ref={inputElement} className="h-24 w-2/3 text-center text-4xl outline-none" placeholder="In welk jaar ben je geboren?" value={year} onChange={e => setYear(e.target.value)} />
+        <input type="text" ref={inputElement} className="h-24 w-full md:w-2/3 text-center text-xl md:text-4xl outline-none" placeholder="In welk jaar ben je geboren?" value={year} onChange={e => setYear(e.target.value)} />
       </form>
     </div>
   )
