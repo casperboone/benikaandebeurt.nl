@@ -7,5 +7,7 @@ type Data = {
 
 export default (req: NextApiRequest, res: NextApiResponse<Data>) => {
   console.log(parseInt(Array.isArray(req.query.year) ? req.query.year[0] : req.query.year))
-  res.status(200).json({ success: parseInt(Array.isArray(req.query.year) ? req.query.year[0] : req.query.year) < 1996 })
-}
+  setTimeout(() => {
+    res.status(200).json({ success: parseInt(Array.isArray(req.query.year) ? req.query.year[0] : req.query.year) < 1996 })
+  }, 2000)
+ }
