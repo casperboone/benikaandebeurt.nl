@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/cors-proxy/*"
-  to = ":splat"
+  to = "https://user-api.coronatest.nl/:splat"
   status = 200
   force = true

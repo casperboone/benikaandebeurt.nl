@@ -14,7 +14,7 @@ export default function Year() {
     (async () => {
       const url = process && process.env.NODE_ENV === 'development'
         ? `/api/dev/${year}`
-        : `/cors-proxy/https://user-api.coronatest.nl/vaccinatie/programma/bepaalbaar/${year}/NEE/NEE`
+        : `/cors-proxy/vaccinatie/programma/booster/${year}/NEE`
 
       const response = await axios.get(url)
       
